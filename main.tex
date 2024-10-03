@@ -1,0 +1,186 @@
+%------------------------
+% Resume Template
+% Author : Anubhav Singh
+% Github : https://github.com/xprilion
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[style=numeric,sorting=ydnt]{biblatex} % You can change 'numeric' to another style (e.g., 'authoryear')
+\addbibresource{publications.bib}
+\nocite{*} 
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Alireza Shirzad}} \\
+  \href{https://alireza-shirzad.github.io/}{Portfolio: alireza-shirzad.github.io} & Email: \href{mailto:}{alrshir@seas.upenn.edu}\\
+  \href{https://github.com/alireza-shirzad}{Github: ~~github.com/alireza-shirzad}  & Mobile: (267) 353-5156 \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{~~Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Pennsylvania}{Philadelphia, USA}
+      {Ph.D. - Computer and Information Science;  GPA: 4.00/4.00}{January 2024 - Present}
+
+      \resumeSubheading
+      {Sharif University of Technology}{Tehran, Iran}
+      {M.Sc. - Secure Communication and Cryptography;  GPA: 4.00/4.00}{2020 - 2024}
+
+      \resumeSubheading
+      {Sharif University of Technology}{Tehran, Iran}
+      {B.Sc. - Electrical Engineering (Minor: Computer Science);  GPA: 3.53/4.00}{2016 - 2020}
+    \resumeSubHeadingListEnd
+    \vspace{10pt}
+
+    \section{~~Research Interests}
+    \resumeSubHeadingListStart
+    \resumeSubItem{Cryptography}{~~~~~~~~~~~~~~~~~~~~ Proof System design, Secure Computation}
+
+    \resumeSubItem{System Security}{~~~~~~~~~~~~~~~~~ Secure Computation, Network Security, Blockchain}
+
+      \resumeSubHeadingListEnd
+  \vspace{-1pt}
+\printbibliography[title={~~Publications}]
+\vspace{10pt}
+
+
+\section{~~Skills}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Languages}{~~~~~~Rust, Java, Python, SageMath, Solidity}
+	\resumeSubItem{Soft Skills}{~~~~~~~Presentation, Teamwork, Writing}
+
+\resumeSubHeadingListEnd
+\vspace{10pt}
+\section{~~Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading{Sharif Information and Computer Technology (Sharif ICT)}{Remote}
+    {Lecturer (Part-time)}{May 2019 - Sep 2019}
+    \resumeItemListStart
+        \resumeItem{Blockchain and Web3 course}
+          {Cryptography fundamentals, Solidity programming}
+      \resumeItemListEnd
+      \resumeSubheading{Sharif University Of Technology}{Tehran, Iran}
+      {Teaching Assistant}{May 2019 - Sep 2019}
+      \resumeItemListStart
+          \resumeItem{Courses}
+            {Provable Security, Security in IOT, Linux/Python Lab, Advanced Programming Lab, Object Oriented Programming, Data Communication Network}
+        \resumeItemListEnd
+\vspace{-5pt}
+\resumeSubHeadingListEnd
+
+% %-----------PROJECTS-----------------
+% \vspace{-5pt}
+% \section{Projects}
+% \resumeSubHeadingListStart
+% \resumeSubItem{Vison - multimedia search engine (NLP, Search Engine, Web Crawlers, Multimedia Processing)}{(Work in progress) Research oriented, open source, search engine for bringing reverse multimedia search to small \& mid scale enterprises. Tech: Python, NodeJS, Intel OpenVino Toolkit, Selenium, TensorFlow (October '18)}
+% \vspace{2pt}
+% \resumeSubItem{Reinforcement Learning based Traffic Control System (Reinforcement Learning, Computer Vision)}{AI model to resolve city traffic around 50\%
+% faster. Tech: Python, Alibaba Cloud, Raspberry Pi, Arduino, SUMO \& OpenCV. (August '18)}
+% \vspace{2pt}
+% \resumeSubItem{Panorama from Satellite Imagery using Distributed Computing (Distributed Computing, Image Processing)}{Images clicked using drones, provided by ISRO were stitched together using distributed public compute nodes, effectively bringing down processing time exponentially. Tech: PHP, C++, Java, Python (March '18)}
+% \vspace{2pt}
+% \resumeSubItem{Drag-n-drop machine learning learning environment (Web Development, Machine Learning)}{Scratch like tool for implementing machine learning pipelines along with built in tutorial for each concept. Tech: Python, JavaScript (September '18)}
+% \vspace{2pt}
+% \resumeSubItem{Search Engine and Social Network(Web Development, Web Crawler, Search)}{Created from scratch a social network and a search engine based on the idea of integrating Facebook and Google. The launched website was among top 1000 websites in India during 2012-2013. Tech: PHP, MySQL, HTML, CSS, WebSockets, JavaScript, RSS, XML ( May '12)}
+% \resumeSubHeadingListEnd
+% \vspace{-5pt}
+
+%-----------Awards-----------------
+\vspace{10pt}
+\section{~~Honors and Awards}
+\begin{description}[font=$\bullet$]
+\item {Granted membership of National Elite Foundation for seven consecutive years - October 2016 untill January 2024}
+\vspace{-5pt}
+\item {Ranked in the top 25\% in B.S and Granted Master Scholarship, Sharif University of Technology: - January 2020 }
+\vspace{-5pt}
+\item {Ranked 32nd among 200000 participants in Iranian Nationwide Mathematics University Entrance Exam - September, 2016}
+
+\end{description}
+
+\vspace{10pt}
+\section{~~Service}
+  \resumeSubHeadingListStart
+	\resumeSubheading
+    {Pre-reviewer}{Tehran, Iran}
+    {The 19'th ISC International Journal of Information Security}{2021 - 2023}
+\vspace{5pt}
+    \resumeSubheading
+    {SUpenn Security and Privacy Seminar Organizer}{Philadelphia, USA}
+    {Organizing seminars, contacting people for giving talks}{September 2024 - Present}
+
+\resumeSubHeadingListEnd
+
+\end{document}
