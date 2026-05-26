@@ -1,28 +1,88 @@
+---
+---
 
-@misc{cryptoeprint:2024/1246,
-      author = {Benedikt Bünz and Tushar Mopuri and Alireza Shirzad, Sriram Sridhar},
-      title = {DewTwo: a transparent PCS with quasi-linear prover, logarithmic verifier and 4KB proofs from falsifiable assumptions},
-      % howpublished = {Cryptology {ePrint} Archive, Paper 2024/1245},
-      % year = {2024},
-      % url = {https://eprint.iacr.org/2024/1245},
-      note = {Submitted to Eurocrypt 2025}
+@string{aps = {American Physical Society,}}
+
+
+@article{dellepere2024garuda,
+  title        = {Garuda and Pari: Smaller and Faster SNARKs via Equifficient Polynomial Commitments},
+  author       = {Dellepere, Michel and Mishra, Pratyush and Shirzad, Alireza},
+  journal      = {Usenix 2026, zk-Summit-25, SBC25},
+  year         = {2024},
+  pdf          = {https://eprint.iacr.org/2024/1245.pdf},
+  eprint       = {https://eprint.iacr.org/2024/1245.pdf},
+  annotation   = {Authors listed in alphabetical order.},
+  abstract     = {SNARKs are powerful cryptographic primitives that allow a prover to produce a succinct proof of a computation. Two key goals of SNARK research are to minimize the size of the proof and to minimize the time required to generate the proof. In this work, we present new SNARK constructions that push the frontier on both of these goals.
+                  
+                  Our first construction, Pari, is a SNARK that achieves the smallest proof size amongst all known SNARKs. Specifically, Pari achieves a proof size of just two group elements and two field elements, which, when instantiated with the BLS12-381 curve, totals just 160 bytes, smaller than that of Groth16 [Groth, EUROCRYPT '16] and Polymath [Lipmaa, CRYPTO '24]. Pari achieves the lowest known gas cost for on-chain SNARK verification, reducing the gas cost by 6\% compared to Groth16 and 17\% compared to FFLONK.
+                  
+                  Our second construction, Garuda, is a SNARK that reduces proof generation time by supporting, for the first time, arbitrary ``custom'' gates and free linear gates (in terms of cryptographic costs). To demonstrate Garuda's performance, we implement and evaluate it, and show that it provides significant prover-time savings compared to state-of-the-art SNARKs (Groth16 and HyperPlonk [EUROCRYPT '23])
+                  
+                  Both constructions rely on a new cryptographic primitive: ``equifficient'' polynomial commitment (EPC) schemes that enforce that committed polynomials have the same representation in particular bases. We provide both rigorous security definitions for this primitive as well as efficient constructions for univariate and multilinear polynomials.
+                  
+                  Our constructions are obtained via a new compiler that obtains a succinct argument by combining polynomial IOPs [Bunz et al., EUROCRYPT '20; Chiesa et al, EUROCRYPT '20] with our EPC schemes. As a matter of independent interest, we show that this argument achieves state-restoration soundness if the underlying PIOP does.}
 }
 
-
-@misc{cryptoeprint:2024/1245,
-      author = {Michel Dellepere and Pratyush Mishra and Alireza Shirzad},
-      title = {Garuda and Pari: Faster and Smaller {SNARKs} via Equifficient Polynomial Commitments},
-      howpublished = {Cryptology {ePrint} Archive, Paper 2024/1245},
-      % year = {2024},
-      url = {https://eprint.iacr.org/2024/1245},
-      note = {Submitted to Eurocrypt 2025}
+@article{HSBB25,
+  author       = {Hossein Hafezi and Alireza Shirzad and Benedikt Bünz and Joseph Bonneau},
+  title        = {{IronDict}: Transparent Dictionaries from Polynomial Commitments},
+  howpublished = {Cryptology {ePrint} Archive, Paper 2025/1580},
+  journal      = {Usenix 2026, RWC 2026},
+  year         = {2025},
+  url          = {https://eprint.iacr.org/2025/1580},
+  pdf          = {https://eprint.iacr.org/2025/1580},
+  abstract     = {We present IronDict, a transparent dictionary construction based on polynomial commitment schemes. Transparent dictionaries enable an untrusted server to maintain a mutable dictionary and provably serve clients lookup queries. A major open challenge is supporting efficient auditing by lightweight clients. Previous solutions either incurred high server costs (limiting throughput) or high client lookup verification costs, hindering them from modern messaging key transparency deployments with billions of users. Our construction makes black-box use of a generic multilinear polynomial commitment scheme and inherits its security notions, i.e. binding and zero-knowledge. We implement our construction with the recent KZH scheme and find that a dictionary with 1 billion entries can be verified on a consumer-grade laptop in 35 ms, a 300x improvement over the state of the art, while also achieving 150,000x smaller proofs (8 KB). In addition, our construction ensures perfect privacy with concretely efficient costs for both the client and the server. We also show fast-forwarding techniques based on incremental verifiable computation (IVC) and checkpoints to enable even faster client auditing.},
+  annotation   = {Hossein and Alireza contributed equally to this work.}
 }
-
 
 @mastersthesis{Shirzad2023,
-  author    = {Alireza Shirzad},
-  title     = {Designing a Succinct Argument System Based on GKR Protocol Via Polynomial Commitment Schemes},
-  school    = {Sharif University Of Technology},
-  year      = {2023},
-  url 		= {https://library.sharif.ir/parvan/resource/}
+  author = {Alireza Shirzad},
+  title  = {Designing a Succinct Argument System Based on GKR Protocol Via Polynomial Commitment Schemes},
+  school = {Aryamehr (Sharif) University Of Technology},
+  year   = {2023},
+  html   = {https://repository.sharif.edu/resource/503663/designing-a-succinct-argument-system-based-on-gkr-protocol-via-polynomial-commitment-schemes}
 }
+
+@article{cryptoeprint:2025/129,
+  abstract   = {We construct the first polynomial commitment scheme (PCS) that has a transparent setup, quasi-linear prover time, log N logNverifier time, and loglog N proof size, for multilinear polynomials of size N. Concretely, we have the smallest proof size amongst transparent PCS, with proof size less than 4.5KB for N≤2^30. We prove that our scheme is secure entirely under falsifiable assumptions about groups of unknown order. The scheme significantly improves on the prior work of Dew (PKC 2023), which has super-cubic prover time and relies on the Generic Group Model (a non-falsifiable assumption). Along the way, we make several contributions that are of independent interest: PoKEMath, a protocol for efficiently proving that an arbitrary predicate over committed integer vectors holds; SIPA, a bulletproofs-style inner product argument in groups of unknown order; we also distill out what prior work required from the Generic Group Model and frame this as a falsifiable assumption.},
+  address    = {Cham},
+  author     = {B{\"u}nz, Benedikt and Mopuri, Tushar and Shirzad, Alireza and Sridhar, Sriram},
+  journal    = {Advances in Cryptology -- CRYPTO 2025},
+  editor     = {Tauman Kalai, Yael and Kamara, Seny F.},
+  isbn       = {978-3-032-01887-8},
+  pages      = {549--583},
+  publisher  = {Springer Nature Switzerland},
+  title      = {DewTwo: A Transparent PCS with Quasi-Linear Prover, Logarithmic Verifier and 4.5KB Proofs from Falsifiable Assumptions},
+  year       = {2025},
+  pdf        = {https://eprint.iacr.org/2025/129.pdf},
+  annotation = {Authors listed in alphabetical order.}
+}
+
+@misc{goodarzi2022coldsupplychainplanning,
+  title         = {Cold Supply Chain Planning including Smart Contracts: An Intelligent Blockchain-based approach},
+  author        = {Soroush Goodarzi and Vahid Kayvanfar and Alireza Haji and Alireza Shirzad},
+  year          = {2022},
+  eprint        = {2209.10410},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CR},
+  pdf           = {https://arxiv.org/pdf/2209.10410}
+}
+
+@misc{cryptoeprint:2026/347,
+  author       = {Alireza Shirzad and Sriram Sridhar and Dimitrios Papadopoulos and Charalampos (Babis) Papamanthou},
+  title        = {Relaxed Modular {PCS} from Arbitrary {PCS} and Applications to {SNARKs} for Integers},
+  year         = {2026},
+  journal      = {ZKProof VIII (2026)},
+  url          = {https://eprint.iacr.org/2026/347},
+  pdf          = {https://eprint.iacr.org/2026/347.pdf},
+}
+
+
+@article{NSSMM25,
+  author       = {Bharath Namboothiry and Alireza Shirzad and Spencer Solit and Ryan Marcus and Pratyush Mishra},
+  title        = {{TruthTable}: A Verifiable Query Engine},
+  journal      = {ZKProof VIII (2026), SeQureDB 2026},
+  year         = {2026},
+  annotation   = {Bharath and Alireza contributed equally to this work.}
+}
+

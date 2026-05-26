@@ -1,0 +1,361 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ydnt/global//global/global/global}
+    \entry{NSSMM25}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=99fe45a6ec5e1fc84da566c2168d1827}{%
+           family={Namboothiry},
+           familyi={N\bibinitperiod},
+           given={Bharath},
+           giveni={B\bibinitperiod}}}%
+        {{hash=016e3c26277aa9aa5ef487ba1aa472f5}{%
+           family={Shirzad},
+           familyi={S\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod}}}%
+        {{hash=949be560f73808bfe13ee7b06aa269dc}{%
+           family={Solit},
+           familyi={S\bibinitperiod},
+           given={Spencer},
+           giveni={S\bibinitperiod}}}%
+        {{hash=32f456ef4d3db3608047cf3243a37a81}{%
+           family={Marcus},
+           familyi={M\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7a31ae48766fecee5a26de15205949fc}{%
+           family={Mishra},
+           familyi={M\bibinitperiod},
+           given={Pratyush},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{248c94f6a6fae658b5b962b2927764dd}
+      \strng{fullhash}{d13e811f4a5583d64b0ee9372fc01cb0}
+      \strng{fullhashraw}{d13e811f4a5583d64b0ee9372fc01cb0}
+      \strng{bibnamehash}{248c94f6a6fae658b5b962b2927764dd}
+      \strng{authorbibnamehash}{248c94f6a6fae658b5b962b2927764dd}
+      \strng{authornamehash}{248c94f6a6fae658b5b962b2927764dd}
+      \strng{authorfullhash}{d13e811f4a5583d64b0ee9372fc01cb0}
+      \strng{authorfullhashraw}{d13e811f4a5583d64b0ee9372fc01cb0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Bharath and Alireza contributed equally to this work.}
+      \field{journaltitle}{ZKProof VIII (2026), SeQureDB 2026}
+      \field{title}{{TruthTable}: A Verifiable Query Engine}
+      \field{year}{2026}
+      \true{nocite}
+    \endentry
+    \entry{cryptoeprint:2026/347}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=016e3c26277aa9aa5ef487ba1aa472f5}{%
+           family={Shirzad},
+           familyi={S\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e81b8f022ba4554a00dc21e3c6c85cb8}{%
+           family={Sridhar},
+           familyi={S\bibinitperiod},
+           given={Sriram},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f018de5455b4ae91eab93cf9f116549f}{%
+           family={Papadopoulos},
+           familyi={P\bibinitperiod},
+           given={Dimitrios},
+           giveni={D\bibinitperiod}}}%
+        {{hash=bfd56ac33d71b92148cce197133b16e1}{%
+           family={Papamanthou},
+           familyi={P\bibinitperiod},
+           given={Charalampos\bibnamedelima (Babis)},
+           giveni={C\bibinitperiod\bibinitdelim (\bibinitperiod}}}%
+      }
+      \strng{namehash}{24ac5295f26f6d11c6fa3abff88b58e2}
+      \strng{fullhash}{5b9bd879165c927c5fe2151c73df5b57}
+      \strng{fullhashraw}{5b9bd879165c927c5fe2151c73df5b57}
+      \strng{bibnamehash}{24ac5295f26f6d11c6fa3abff88b58e2}
+      \strng{authorbibnamehash}{24ac5295f26f6d11c6fa3abff88b58e2}
+      \strng{authornamehash}{24ac5295f26f6d11c6fa3abff88b58e2}
+      \strng{authorfullhash}{5b9bd879165c927c5fe2151c73df5b57}
+      \strng{authorfullhashraw}{5b9bd879165c927c5fe2151c73df5b57}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Authors listed based on contribution order.}
+      \field{journaltitle}{ZKProof VIII (2026)}
+      \field{title}{Relaxed Modular {PCS} from Arbitrary {PCS} and Applications to {SNARKs} for Integers}
+      \field{year}{2026}
+      \true{nocite}
+      \verb{file}
+      \verb https://eprint.iacr.org/2026/347.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://eprint.iacr.org/2026/347
+      \endverb
+      \verb{url}
+      \verb https://eprint.iacr.org/2026/347
+      \endverb
+    \endentry
+    \entry{cryptoeprint:2025/129}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=188658a4b692b633b6c2576bc1fac67e}{%
+           family={Bünz},
+           familyi={B\bibinitperiod},
+           given={Benedikt},
+           giveni={B\bibinitperiod}}}%
+        {{hash=168c986ebc0b76dd5d0a668f12a818d7}{%
+           family={Mopuri},
+           familyi={M\bibinitperiod},
+           given={Tushar},
+           giveni={T\bibinitperiod}}}%
+        {{hash=016e3c26277aa9aa5ef487ba1aa472f5}{%
+           family={Shirzad},
+           familyi={S\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e81b8f022ba4554a00dc21e3c6c85cb8}{%
+           family={Sridhar},
+           familyi={S\bibinitperiod},
+           given={Sriram},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=1a91d7f205b70671cfbdd60ea19708bc}{%
+           family={Tauman\bibnamedelima Kalai},
+           familyi={T\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Yael},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=45fced9a5645550100c205eb95c3c94f}{%
+           family={Kamara},
+           familyi={K\bibinitperiod},
+           given={Seny\bibnamedelima F.},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature Switzerland}%
+      }
+      \strng{namehash}{ac27112af00116b55692e56da21ff6f6}
+      \strng{fullhash}{d2d8d8899cf470daecd4c60565020d8b}
+      \strng{fullhashraw}{d2d8d8899cf470daecd4c60565020d8b}
+      \strng{bibnamehash}{ac27112af00116b55692e56da21ff6f6}
+      \strng{authorbibnamehash}{ac27112af00116b55692e56da21ff6f6}
+      \strng{authornamehash}{ac27112af00116b55692e56da21ff6f6}
+      \strng{authorfullhash}{d2d8d8899cf470daecd4c60565020d8b}
+      \strng{authorfullhashraw}{d2d8d8899cf470daecd4c60565020d8b}
+      \strng{editorbibnamehash}{ff619abc452edd95f6f7eeac6084ab7d}
+      \strng{editornamehash}{ff619abc452edd95f6f7eeac6084ab7d}
+      \strng{editorfullhash}{ff619abc452edd95f6f7eeac6084ab7d}
+      \strng{editorfullhashraw}{ff619abc452edd95f6f7eeac6084ab7d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We construct the first polynomial commitment scheme (PCS) that has a transparent setup, quasi-linear prover time, log N logNverifier time, and loglog N proof size, for multilinear polynomials of size N. Concretely, we have the smallest proof size amongst transparent PCS, with proof size less than 4.5KB for N≤2^30. We prove that our scheme is secure entirely under falsifiable assumptions about groups of unknown order. The scheme significantly improves on the prior work of Dew (PKC 2023), which has super-cubic prover time and relies on the Generic Group Model (a non-falsifiable assumption). Along the way, we make several contributions that are of independent interest: PoKEMath, a protocol for efficiently proving that an arbitrary predicate over committed integer vectors holds; SIPA, a bulletproofs-style inner product argument in groups of unknown order; we also distill out what prior work required from the Generic Group Model and frame this as a falsifiable assumption.}
+      \field{annotation}{Authors listed in alphabetical order.}
+      \field{isbn}{978-3-032-01887-8}
+      \field{journaltitle}{Advances in Cryptology -- CRYPTO 2025}
+      \field{title}{DewTwo: A Transparent PCS with Quasi-Linear Prover, Logarithmic Verifier and 4.5KB Proofs from Falsifiable Assumptions}
+      \field{year}{2025}
+      \true{nocite}
+      \field{pages}{549\bibrangedash 583}
+      \range{pages}{35}
+      \verb{file}
+      \verb https://eprint.iacr.org/2025/129.pdf
+      \endverb
+    \endentry
+    \entry{HSBB25}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=364b4e113e2c02c2a68511e9a6d90ce3}{%
+           family={Hafezi},
+           familyi={H\bibinitperiod},
+           given={Hossein},
+           giveni={H\bibinitperiod}}}%
+        {{hash=016e3c26277aa9aa5ef487ba1aa472f5}{%
+           family={Shirzad},
+           familyi={S\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod}}}%
+        {{hash=188658a4b692b633b6c2576bc1fac67e}{%
+           family={Bünz},
+           familyi={B\bibinitperiod},
+           given={Benedikt},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e6eb78ec5f92eaff4e9d4b944aff4c9c}{%
+           family={Bonneau},
+           familyi={B\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{16215b015581043462754d2c91ece70b}
+      \strng{fullhash}{a9fdfa8524f2dafa42ebdcd8057f4b73}
+      \strng{fullhashraw}{a9fdfa8524f2dafa42ebdcd8057f4b73}
+      \strng{bibnamehash}{16215b015581043462754d2c91ece70b}
+      \strng{authorbibnamehash}{16215b015581043462754d2c91ece70b}
+      \strng{authornamehash}{16215b015581043462754d2c91ece70b}
+      \strng{authorfullhash}{a9fdfa8524f2dafa42ebdcd8057f4b73}
+      \strng{authorfullhashraw}{a9fdfa8524f2dafa42ebdcd8057f4b73}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present IronDict, a transparent dictionary construction based on polynomial commitment schemes. Transparent dictionaries enable an untrusted server to maintain a mutable dictionary and provably serve clients lookup queries. A major open challenge is supporting efficient auditing by lightweight clients. Previous solutions either incurred high server costs (limiting throughput) or high client lookup verification costs, hindering them from modern messaging key transparency deployments with billions of users. Our construction makes black-box use of a generic multilinear polynomial commitment scheme and inherits its security notions, i.e. binding and zero-knowledge. We implement our construction with the recent KZH scheme and find that a dictionary with 1 billion entries can be verified on a consumer-grade laptop in 35 ms, a 300x improvement over the state of the art, while also achieving 150,000x smaller proofs (8 KB). In addition, our construction ensures perfect privacy with concretely efficient costs for both the client and the server. We also show fast-forwarding techniques based on incremental verifiable computation (IVC) and checkpoints to enable even faster client auditing.}
+      \field{annotation}{Hossein and Alireza contributed equally to this work.}
+      \field{howpublished}{Cryptology {ePrint} Archive, Paper 2025/1580}
+      \field{journaltitle}{Usenix 2026, RWC 2026}
+      \field{title}{{IronDict}: Transparent Dictionaries from Polynomial Commitments}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{file}
+      \verb https://eprint.iacr.org/2025/1580
+      \endverb
+      \verb{urlraw}
+      \verb https://eprint.iacr.org/2025/1580
+      \endverb
+      \verb{url}
+      \verb https://eprint.iacr.org/2025/1580
+      \endverb
+    \endentry
+    \entry{dellepere2024garuda}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=32f5995cb472eab1f6e0bd1c181fa511}{%
+           family={Dellepere},
+           familyi={D\bibinitperiod},
+           given={Michel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7a31ae48766fecee5a26de15205949fc}{%
+           family={Mishra},
+           familyi={M\bibinitperiod},
+           given={Pratyush},
+           giveni={P\bibinitperiod}}}%
+        {{hash=016e3c26277aa9aa5ef487ba1aa472f5}{%
+           family={Shirzad},
+           familyi={S\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b557353e42f7f72bd96fb7240b344b59}
+      \strng{fullhash}{b557353e42f7f72bd96fb7240b344b59}
+      \strng{fullhashraw}{b557353e42f7f72bd96fb7240b344b59}
+      \strng{bibnamehash}{b557353e42f7f72bd96fb7240b344b59}
+      \strng{authorbibnamehash}{b557353e42f7f72bd96fb7240b344b59}
+      \strng{authornamehash}{b557353e42f7f72bd96fb7240b344b59}
+      \strng{authorfullhash}{b557353e42f7f72bd96fb7240b344b59}
+      \strng{authorfullhashraw}{b557353e42f7f72bd96fb7240b344b59}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{SNARKs are powerful cryptographic primitives that allow a prover to produce a succinct proof of a computation. Two key goals of SNARK research are to minimize the size of the proof and to minimize the time required to generate the proof. In this work, we present new SNARK constructions that push the frontier on both of these goals. Our first construction, Pari, is a SNARK that achieves the smallest proof size amongst all known SNARKs. Specifically, Pari achieves a proof size of just two group elements and two field elements, which, when instantiated with the BLS12-381 curve, totals just 160 bytes, smaller than that of Groth16 [Groth, EUROCRYPT '16] and Polymath [Lipmaa, CRYPTO '24]. Pari achieves the lowest known gas cost for on-chain SNARK verification, reducing the gas cost by 6% compared to Groth16 and 17% compared to FFLONK. Our second construction, Garuda, is a SNARK that reduces proof generation time by supporting, for the first time, arbitrary ``custom'' gates and free linear gates (in terms of cryptographic costs). To demonstrate Garuda's performance, we implement and evaluate it, and show that it provides significant prover-time savings compared to state-of-the-art SNARKs (Groth16 and HyperPlonk [EUROCRYPT '23]) Both constructions rely on a new cryptographic primitive: ``equifficient'' polynomial commitment (EPC) schemes that enforce that committed polynomials have the same representation in particular bases. We provide both rigorous security definitions for this primitive as well as efficient constructions for univariate and multilinear polynomials. Our constructions are obtained via a new compiler that obtains a succinct argument by combining polynomial IOPs [Bunz et al., EUROCRYPT '20; Chiesa et al, EUROCRYPT '20] with our EPC schemes. As a matter of independent interest, we show that this argument achieves state-restoration soundness if the underlying PIOP does.}
+      \field{annotation}{Authors listed in alphabetical order.}
+      \field{journaltitle}{Usenix 2026, zk-Summit-25, SBC25}
+      \field{title}{Garuda and Pari: Smaller and Faster SNARKs via Equifficient Polynomial Commitments}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{eprint}
+      \verb https://eprint.iacr.org/2024/1245.pdf
+      \endverb
+      \verb{file}
+      \verb https://eprint.iacr.org/2024/1245.pdf
+      \endverb
+    \endentry
+    \entry{Shirzad2023}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=016e3c26277aa9aa5ef487ba1aa472f5}{%
+           family={Shirzad},
+           familyi={S\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Aryamehr (Sharif) University Of Technology}%
+      }
+      \strng{namehash}{016e3c26277aa9aa5ef487ba1aa472f5}
+      \strng{fullhash}{016e3c26277aa9aa5ef487ba1aa472f5}
+      \strng{fullhashraw}{016e3c26277aa9aa5ef487ba1aa472f5}
+      \strng{bibnamehash}{016e3c26277aa9aa5ef487ba1aa472f5}
+      \strng{authorbibnamehash}{016e3c26277aa9aa5ef487ba1aa472f5}
+      \strng{authornamehash}{016e3c26277aa9aa5ef487ba1aa472f5}
+      \strng{authorfullhash}{016e3c26277aa9aa5ef487ba1aa472f5}
+      \strng{authorfullhashraw}{016e3c26277aa9aa5ef487ba1aa472f5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Designing a Succinct Argument System Based on GKR Protocol Via Polynomial Commitment Schemes}
+      \field{type}{mathesis}
+      \field{year}{2023}
+      \true{nocite}
+    \endentry
+    \entry{goodarzi2022coldsupplychainplanning}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=b9bdde73a2f9bc419d34ced0e4604269}{%
+           family={Goodarzi},
+           familyi={G\bibinitperiod},
+           given={Soroush},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f02db7bd866598056fe5afa9c89703bf}{%
+           family={Kayvanfar},
+           familyi={K\bibinitperiod},
+           given={Vahid},
+           giveni={V\bibinitperiod}}}%
+        {{hash=fade51ea7ae14479d74d5426151df8b7}{%
+           family={Haji},
+           familyi={H\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod}}}%
+        {{hash=016e3c26277aa9aa5ef487ba1aa472f5}{%
+           family={Shirzad},
+           familyi={S\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4de84daae858a965537fd9d380f1e770}
+      \strng{fullhash}{6629e6a53c78bf5d173ffe985b9d7f13}
+      \strng{fullhashraw}{6629e6a53c78bf5d173ffe985b9d7f13}
+      \strng{bibnamehash}{4de84daae858a965537fd9d380f1e770}
+      \strng{authorbibnamehash}{4de84daae858a965537fd9d380f1e770}
+      \strng{authornamehash}{4de84daae858a965537fd9d380f1e770}
+      \strng{authorfullhash}{6629e6a53c78bf5d173ffe985b9d7f13}
+      \strng{authorfullhashraw}{6629e6a53c78bf5d173ffe985b9d7f13}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CR}
+      \field{eprinttype}{arXiv}
+      \field{title}{Cold Supply Chain Planning including Smart Contracts: An Intelligent Blockchain-based approach}
+      \field{year}{2022}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2209.10410
+      \endverb
+      \verb{file}
+      \verb https://arxiv.org/pdf/2209.10410
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

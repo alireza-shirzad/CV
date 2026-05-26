@@ -16,9 +16,53 @@
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
-\usepackage[style=numeric,sorting=ydnt]{biblatex} % You can change 'numeric' to another style (e.g., 'authoryear')
+\usepackage[style=numeric,sorting=ydnt,maxbibnames=99,minbibnames=99]{biblatex} % You can change 'numeric' to another style (e.g., 'authoryear')
 \addbibresource{publications.bib}
-\nocite{*} 
+\nocite{*}
+
+% Suppress the (year) parens biblatex emits even when the date field is empty
+\renewbibmacro*{issue+date}{}
+
+% Render the annotation field (e.g. "Authors listed alphabetically.") in italic on a new line
+\DeclareFieldFormat{annotation}{\mkbibitalic{#1}}
+\renewbibmacro*{addendum+pubstate}{%
+  \printfield{addendum}%
+  \newunit\newblock
+  \printfield{pubstate}%
+  \newunit\newblock
+  \iffieldundef{annotation}{}{\printfield{annotation}}%
+}
+
+% Strip every bib field except authors, title, venue, and annotation
+\AtEveryBibitem{%
+  \clearfield{pages}%
+  \clearfield{volume}%
+  \clearfield{number}%
+  \clearfield{issue}%
+  \clearfield{isbn}%
+  \clearfield{issn}%
+  \clearfield{doi}%
+  \clearfield{url}%
+  \clearfield{urldate}%
+  \clearfield{eprint}%
+  \clearfield{eprinttype}%
+  \clearfield{eprintclass}%
+  \clearfield{archiveprefix}%
+  \clearfield{primaryclass}%
+  \clearfield{abstract}%
+  \clearfield{annote}%
+  \clearfield{addendum}%
+  \clearfield{note}%
+  \clearfield{address}%
+  \clearfield{location}%
+  \clearfield{publisher}%
+  \clearfield{month}%
+  \clearfield{year}%
+  \clearfield{date}%
+  \clearfield{pdf}%
+  \clearfield{html}%
+  \clearname{editor}%
+}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -45,36 +89,8 @@
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 %-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeItemWithoutTitle}[1]{
-  \item\small{
-    {\vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{#3} & \textit{#4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
-
+% Custom commands removed; macros unrolled inline
 \renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-----------------------------
 %%%%%%  CV STARTS HERE  %%%%%%
@@ -90,97 +106,212 @@
 
 %-----------EDUCATION-----------------
 \section{~~Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of Pennsylvania}{Philadelphia, USA}
-      {Ph.D. - Computer and Information Science;  GPA: 4.00/4.00}{January 2024 - Present}
+\begin{itemize}[leftmargin=*,nosep]
+  \item
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+          \textbf{University of Pennsylvania} & Philadelphia, USA \\
+          \textit{Ph.D. - Computer and Information Science;  GPA: 3.91/4.00} & \textit{2024-Present} \\
+        \end{tabular*}
 
-      \resumeSubheading
-      {Sharif University of Technology}{Tehran, Iran}
-      {M.Sc. - Secure Communication and Cryptography;  GPA: 4.00/4.00}{2020 - 2024}
+        \item
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+          \textbf{Sharif University of Technology} & Tehran, Iran \\
+          \textit{M.Sc. - Secure Communication and Cryptography;  GPA: 4.00/4.00} & \textit{2021 - 2024} \\
+        \end{tabular*}
 
-      \resumeSubheading
-      {Sharif University of Technology}{Tehran, Iran}
-      {B.Sc. - Electrical Engineering (Minor: Computer Science);  GPA: 3.53/4.00}{2016 - 2020}
-    \resumeSubHeadingListEnd
-    \vspace{10pt}
-
-    \section{~~Research Interests}
-    \resumeSubHeadingListStart
-    \resumeSubItem{Cryptography}{~~~~~~~~~~~~~~~~~~~~ Proof System design, Secure Computation}
-
-    \resumeSubItem{System Security}{~~~~~~~~~~~~~~~~~ Secure Computation, Network Security, Blockchain}
-
-      \resumeSubHeadingListEnd
-  \vspace{-1pt}
+        \item
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+          \textbf{Sharif University of Technology} & Tehran, Iran \\
+          \textit{B.Sc. - Electrical Engineering (Minor: Computer Science);  GPA: 3.53/4.00} & \textit{2016 - 2021} \\
+        \end{tabular*}
+\end{itemize}
+\section{~~Research Interests}
+Applied Cryptography, Building provably secure systems from Cryptography
 \printbibliography[title={~~Publications}]
-\vspace{10pt}
+\section{~~Talks}
+\begin{itemize}[leftmargin=*,nosep]
+  \item \textbf{TruthTable: A Verifiable Query Engine}
+        \begin{itemize}[leftmargin=*, nosep]
+          \item \begin{tabular*}{0.95\textwidth}{l@{\extracolsep{\fill}}r}
+                  NYU Cryptography and Security Seminar, New York, USA & \textit{May 2026} \\
+                \end{tabular*}
+        \end{itemize}
+  \item \textbf{IronDict: Transparent Dictionaries from Polynomial Commitments}
+        \begin{itemize}[leftmargin=*, nosep]
+          \item \begin{tabular*}{0.95\textwidth}{l@{\extracolsep{\fill}}r}
+                  UPenn Security and Privacy Seminar, Philadelphia, USA & \textit{October 2025} \\
+                \end{tabular*}
+          \item \begin{tabular*}{0.95\textwidth}{l@{\extracolsep{\fill}}r}
+                  Berkeley Crypto Seminars, Remote & \textit{October 2025} \\
+                \end{tabular*}
+        \end{itemize}
+  \item \textbf{Garuda and Pari: Smaller and Faster SNARKs via Equifficient Polynomial Commitments}
+        \begin{itemize}[leftmargin=*, nosep]
+          \item \begin{tabular*}{0.95\textwidth}{l@{\extracolsep{\fill}}r}
+                  Science of Blockchain Conference, Berkeley, USA & \textit{August 2025} \\
+                \end{tabular*}
+          \item \begin{tabular*}{0.95\textwidth}{l@{\extracolsep{\fill}}r}
+                  SBC 2025 Online Science Fair, Remote & \textit{July 2025} \\
+                \end{tabular*}
+          \item \begin{tabular*}{0.95\textwidth}{l@{\extracolsep{\fill}}r}
+                  Berkeley Crypto Seminars, Berkeley, USA & \textit{December 2024} \\
+                \end{tabular*}
+          \item \begin{tabular*}{0.95\textwidth}{l@{\extracolsep{\fill}}r}
+                  CMU LayerZero Crypto Seminar, Pittsburgh, USA & \textit{December 2024} \\
+                \end{tabular*}
+          \item \begin{tabular*}{0.95\textwidth}{l@{\extracolsep{\fill}}r}
+                  Stanford Security Seminar, Stanford, USA & \textit{December 2024} \\
+                \end{tabular*}
+          \item \begin{tabular*}{0.95\textwidth}{l@{\extracolsep{\fill}}r}
+                  Sumcheck Builders Club, Remote & \textit{November 2024} \\
+                \end{tabular*}
+          \item \begin{tabular*}{0.95\textwidth}{l@{\extracolsep{\fill}}r}
+                  University of Maryland Crypto Reading Group, College Park, USA & \textit{November 2024} \\
+                \end{tabular*}
+          \item \begin{tabular*}{0.95\textwidth}{l@{\extracolsep{\fill}}r}
+                  NYU Cryptography and Security Seminar, New York, USA & \textit{October 2024} \\
+                \end{tabular*}
+          \item \begin{tabular*}{0.95\textwidth}{l@{\extracolsep{\fill}}r}
+                  UPenn Security and Privacy Seminar, Philadelphia, USA & \textit{October 2024} \\
+                \end{tabular*}
+        \end{itemize}
+\end{itemize}
+\section{~~Work Experience}
+\begin{itemize}[leftmargin=*,nosep]
+  \item
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+          \textbf{Lagrange Labs} & Remote \\
+          \textit{Research Intern - Working with Dr. charalampos papamanthou and Dr. Dimitris Papadopoulos} & \textit{Summer 2025} \\
+        \end{tabular*}
+\end{itemize}
 
 
-\section{~~Skills}
-	\resumeSubHeadingListStart
-	\resumeSubItem{Languages}{~~~~~~Rust, Java, Python, SageMath, Solidity}
-	\resumeSubItem{Soft Skills}{~~~~~~~Presentation, Teamwork, Writing}
 
-\resumeSubHeadingListEnd
-\vspace{10pt}
-\section{~~Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheading{Sharif Information and Computer Technology (Sharif ICT)}{Remote}
-    {Lecturer (Part-time)}{May 2019 - Sep 2019}
-    \resumeItemListStart
-        \resumeItem{Blockchain and Web3 course}
-          {Cryptography fundamentals, Solidity programming}
-      \resumeItemListEnd
-      \resumeSubheading{Sharif University Of Technology}{Tehran, Iran}
-      {Teaching Assistant}{May 2019 - Sep 2019}
-      \resumeItemListStart
-          \resumeItem{Courses}
-            {Provable Security, Security in IOT, Linux/Python Lab, Advanced Programming Lab, Object Oriented Programming, Data Communication Network}
-        \resumeItemListEnd
-\vspace{-5pt}
-\resumeSubHeadingListEnd
+
+\section{~~Teaching Experience}
+\begin{itemize}[leftmargin=*,nosep]
+  \item \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+          \textbf{University of Pennsylvania} & Philadelphia, USA \\
+        \end{tabular*}
+        \begin{itemize}[nosep]
+          \item {\small \begin{tabular*}{0.93\textwidth}{l@{\extracolsep{\fill}}r}
+            \textbf{CIS 7000}: Provably Secure Systems with Cryptography & \textit{Fall 2025} \\
+          \end{tabular*}}
+        \end{itemize}
+  \item \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+          \textbf{Sharif Information and Computer Technology (Sharif ICT)} & Remote \\
+        \end{tabular*}
+        \begin{itemize}[nosep]
+          \item {\small \begin{tabular*}{0.93\textwidth}{l@{\extracolsep{\fill}}r}
+            \textbf{Blockchain and Web3} & \textit{January 2021 - September 2023} \\
+          \end{tabular*}}
+        \end{itemize}
+\end{itemize}
+
+\section{~~Teaching Assistant Experience}
+\begin{itemize}[leftmargin=*,nosep]
+  \item \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+          \textbf{University of Pennsylvania} & Philadelphia, USA \\
+        \end{tabular*}
+        \begin{itemize}[nosep]
+          \item {\small \begin{tabular*}{0.93\textwidth}{l@{\extracolsep{\fill}}r}
+            CIS 5560: Cryptography & \textit{Spring 2026} \\
+          \end{tabular*}}
+          \item {\small \begin{tabular*}{0.93\textwidth}{l@{\extracolsep{\fill}}r}
+            CIS 5510: Computer and Network Security & \textit{Fall 2024} \\
+          \end{tabular*}}
+          \item {\small \begin{tabular*}{0.93\textwidth}{l@{\extracolsep{\fill}}r}
+            CIS 5560: Cryptography & \textit{Spring 2024} \\
+          \end{tabular*}}
+        \end{itemize}
+  \item \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+          \textbf{Sharif University Of Technology} & Tehran, Iran \\
+        \end{tabular*}
+        \begin{itemize}[nosep]
+          \item {\small \begin{tabular*}{0.93\textwidth}{l@{\extracolsep{\fill}}r}
+            Linux/Python Lab & \textit{Fall 2022} \\
+          \end{tabular*}}
+          \item {\small \begin{tabular*}{0.93\textwidth}{l@{\extracolsep{\fill}}r}
+            IoT Security & \textit{Fall 2022} \\
+          \end{tabular*}}
+          \item {\small \begin{tabular*}{0.93\textwidth}{l@{\extracolsep{\fill}}r}
+            Object Oriented Programming (Head TA) & \textit{Spring 2022} \\
+          \end{tabular*}}
+          \item {\small \begin{tabular*}{0.93\textwidth}{l@{\extracolsep{\fill}}r}
+            Provable Security & \textit{Spring 2022} \\
+          \end{tabular*}}
+          \item {\small \begin{tabular*}{0.93\textwidth}{l@{\extracolsep{\fill}}r}
+            Numerical Computation & \textit{Fall 2021} \\
+          \end{tabular*}}
+          \item {\small \begin{tabular*}{0.93\textwidth}{l@{\extracolsep{\fill}}r}
+            Object Oriented Programming (Head TA) & \textit{Spring 2021} \\
+          \end{tabular*}}
+          \item {\small \begin{tabular*}{0.93\textwidth}{l@{\extracolsep{\fill}}r}
+            Signals and Systems & \textit{Spring 2021} \\
+          \end{tabular*}}
+          \item {\small \begin{tabular*}{0.93\textwidth}{l@{\extracolsep{\fill}}r}
+            Data Communication Network & \textit{Spring 2020} \\
+          \end{tabular*}}
+        \end{itemize}
+\end{itemize}
 
 % %-----------PROJECTS-----------------
-% \vspace{-5pt}
+% 
 % \section{Projects}
 % \resumeSubHeadingListStart
 % \resumeSubItem{Vison - multimedia search engine (NLP, Search Engine, Web Crawlers, Multimedia Processing)}{(Work in progress) Research oriented, open source, search engine for bringing reverse multimedia search to small \& mid scale enterprises. Tech: Python, NodeJS, Intel OpenVino Toolkit, Selenium, TensorFlow (October '18)}
-% \vspace{2pt}
+
 % \resumeSubItem{Reinforcement Learning based Traffic Control System (Reinforcement Learning, Computer Vision)}{AI model to resolve city traffic around 50\%
 % faster. Tech: Python, Alibaba Cloud, Raspberry Pi, Arduino, SUMO \& OpenCV. (August '18)}
-% \vspace{2pt}
 % \resumeSubItem{Panorama from Satellite Imagery using Distributed Computing (Distributed Computing, Image Processing)}{Images clicked using drones, provided by ISRO were stitched together using distributed public compute nodes, effectively bringing down processing time exponentially. Tech: PHP, C++, Java, Python (March '18)}
-% \vspace{2pt}
 % \resumeSubItem{Drag-n-drop machine learning learning environment (Web Development, Machine Learning)}{Scratch like tool for implementing machine learning pipelines along with built in tutorial for each concept. Tech: Python, JavaScript (September '18)}
-% \vspace{2pt}
 % \resumeSubItem{Search Engine and Social Network(Web Development, Web Crawler, Search)}{Created from scratch a social network and a search engine based on the idea of integrating Facebook and Google. The launched website was among top 1000 websites in India during 2012-2013. Tech: PHP, MySQL, HTML, CSS, WebSockets, JavaScript, RSS, XML ( May '12)}
 % \resumeSubHeadingListEnd
-% \vspace{-5pt}
+% 
 
 %-----------Awards-----------------
-\vspace{10pt}
 \section{~~Honors and Awards}
-\begin{description}[font=$\bullet$]
-\item {Granted membership of National Elite Foundation for seven consecutive years - October 2016 untill January 2024}
-\vspace{-5pt}
-\item {Ranked in the top 25\% in B.S and Granted Master Scholarship, Sharif University of Technology: - January 2020 }
-\vspace{-5pt}
-\item {Ranked 32nd among 200000 participants in Iranian Nationwide Mathematics University Entrance Exam - September, 2016}
+\begin{itemize}[nosep, leftmargin=*]
+  \item {Granted membership of National Elite Foundation for seven consecutive years - October 2016 untill Jan 2024}
+  \item {Ranked in the top 25\% in B.S and Granted Master Scholarship, Sharif University of Technology: - Jan 2020 }
+  \item {Ranked 32nd among 200000 participants in Iranian Nationwide Mathematics University Entrance Exam - Sep, 2016}
+\end{itemize}
 
-\end{description}
-
-\vspace{10pt}
 \section{~~Service}
-  \resumeSubHeadingListStart
-	\resumeSubheading
-    {Pre-reviewer}{Tehran, Iran}
-    {The 19'th ISC International Journal of Information Security}{2021 - 2023}
-\vspace{5pt}
-    \resumeSubheading
-    {SUpenn Security and Privacy Seminar Organizer}{Philadelphia, USA}
-    {Organizing seminars, contacting people for giving talks}{September 2024 - Present}
+\begin{itemize}[leftmargin=*,nosep]
+  \item \textbf{Artifact-Reviewer}
+        \begin{itemize}[leftmargin=*, nosep]
+          \item{26th Privacy Enhancing Technologies Symposium (PETS 2026)}
+        \end{itemize}
+  \item \textbf{Sub-Reviewer}
+        \begin{itemize}[leftmargin=*, nosep]
+          \item{The 19'th ISC International Journal of Information Security}
+          \item{Financial Cryptography and Data Security 2025}
+          \item{46th IEEE Symposium on Security and Privacy}
+        \end{itemize}
 
-\resumeSubHeadingListEnd
+  \item \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+          \textbf{Upenn Security and Privacy Seminar coordinator}& \textit{September 2024 - September 2025} \\
+        \end{tabular*}
+          \item \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+          \textbf{Schlein cybersecurity center local seminar coordinator}& \textit{January 2026 - Present} \\
+        \end{tabular*}
+                  \item \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+          \textbf{Penn Iranian Academic Network (PIRAN) President}& \textit{March 2026 - Present} \\
+        \end{tabular*}
+\end{itemize}
+% \section{~~Skills}
+% \begin{itemize}[leftmargin=*,nosep]
+%   \item\small{\textbf{Languages}{: ~~~~~~Rust, Java, Python, SageMath, Solidity }}
+%   \item\small{\textbf{Soft Skills}{: ~~~~~~~Presentation, Teamwork, Writing }}
 
+% \end{itemize}
+% \section{~~References}
+% \begin{itemize}[leftmargin=*,nosep]
+%   \item
+%         \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+%           \textbf{Pratyush Mishra} & prat@seas.upenn.edu \\
+%           \textit{Assistant Professor, Dept of Computer and Information Science, University of Pennsylvania} & \textit{} \\
+%         \end{tabular*}
+% \end{itemize}
 \end{document}
